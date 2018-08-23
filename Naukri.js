@@ -25,7 +25,7 @@ if(there!=null)
     var j = await h.$(".widgetHead");
     var k = await j.$(".widgetTitle + span")
     await k.click();
-  //  page.waitFor()
+
     console.log("hello")
     
     await page.keyboard.press('Tab');
