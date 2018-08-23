@@ -9,8 +9,7 @@ var there  = await page.$("#usernameField");
 
 var there2 = await page.$("#emailTxt");
 if(there!=null)
-{
-   await page.click("#usernameField");
+{ await page.click("#usernameField");
    await page.keyboard.type("arvindchandrashekar@hotmail.com");
 
    await page.click("#passwordField");
