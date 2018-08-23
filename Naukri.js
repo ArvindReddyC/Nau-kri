@@ -17,17 +17,21 @@ if(there!=null)
 
    await page.keyboard.press('Enter');
    await page.waitForNavigation()
-    for(var i=0 ; i< 40 ; i++)
+    for(var i=1 ; i< 40 ; i++)
     {
     var test = await page.$("#root");
     var h = await test.$(".resumeHeadline");
     var j = await h.$(".widgetHead");
     var k = await j.$(".widgetTitle + span")
     await k.click();
-    console.log("hello")
-    console.log("hey")
     await page.keyboard.press('Tab');
+    if( i%2 == 0 )
+    {
     await page.keyboard.type(".");
+    }
+    else{
+        await page.keyboard.press('Backspaces')
+    }
     await page.keyboard.press('Tab');
     await page.keyboard.press('Tab');
     await page.keyboard.press('Enter')
